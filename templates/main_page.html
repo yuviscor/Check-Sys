@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health check</title>
+    <header> This web application deals with the Operating System configuration without manual efforts try it for free</header>
+</head>
+<style>
+
+
+
+header{
+
+     animation:blinkingText 1.2s infinite;
+    background-color: burlywood;
+    color: darkred;
+    height: 40px;
+    text-align: center;
+}
+
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: red; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: red;    }
+}
+
+body{
+
+
+    background-color: blanchedalmond;
+    opacity: 0.9;
+}
+
+#box{
+
+
+    margin-left: auto;
+    
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 10%;
+    
+
+  
+    
+
+}
+#imgg{
+
+box-shadow: 20px 20px 20px burlywood;
+margin-bottom: 15%;
+text-align: center;
+
+}
+button:hover{
+
+animation: both;
+background-color: burlywood;
+color: darkred;
+
+border: 2px solid darksalmon;
+border-radius: 2px 2px 2px 2px;
+
+}
+
+
+</style>
+
+<body>
+
+
+    
+
+  <div id="box">
+
+
+    
+        <img id="imgg" src="/static/img/pc2.png" width="200px " height="200px">
+
+
+
+<table width=100%> 
+    
+    <tr>
+
+        <td>
+<form action="/check" method="GET">
+
+<button type="submit">Check</button>
+
+
+
+
+</form>
+</td>
+
+
+    <td>
+<form action="/check_network" method="GET">
+
+<button type="submit">Check network</button>
+
+
+</form>
+</td>
+</tr>
+</table>
+
+        <h1 style="box-shadow: 4px 4px 4px burlywood; color: chocolate;background-color: rgba(255,248,220,0.7);">{{ message }}</h1>
+
+  </div>
+
+    
+    
+</body>
+</html>
